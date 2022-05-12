@@ -9381,7 +9381,7 @@
   dependencies:
     "node-forge" "^0.10.0"
 
-"semantic-release@>=18.0.0", "semantic-release@>=18.0.0-beta.1", "semantic-release@>=19.0.0":
+"semantic-release@^19.0.2", "semantic-release@>=18.0.0", "semantic-release@>=18.0.0-beta.1", "semantic-release@>=19.0.0":
   "integrity" "sha512-7tPonjZxukKECmClhsfyMKDt0GR38feIC2HxgyYaBi+9tDySBLjK/zYDLhh+m6yjnHIJa9eBTKYE7k63ZQcYbw=="
   "resolved" "https://registry.npmjs.org/semantic-release/-/semantic-release-19.0.2.tgz"
   "version" "19.0.2"
