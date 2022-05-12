@@ -4,20 +4,20 @@ on:
   push:
     branches:
       - master
+
 jobs:
-  publish:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - name: Install dependencies
-        run: npm install
-      - name: Build app
-        run: npm run build --if-present
-      - name: Semantic release
+          node-version: "12.x"
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+      - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+          
