@@ -3,15 +3,15 @@ name: Semantic release
 on:
   push:
     branches:
-      - master
-
+      - main
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: "12.x"
       - run: npm ci
